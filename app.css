@@ -16,12 +16,27 @@
     color:var(--textColor);
     list-style: none;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 body, html {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
+
+body::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--primaryColor); /* Set the color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--whiteColor); /* Set the color of the scrollbar thumb */
+}
+
 
 html._noscroll{
     overflow: hidden;
@@ -176,6 +191,7 @@ h2::after{
 .hero-information > span > span{
     color:var(--primaryColor);
     margin: 0;
+    font-weight: bold;
 }
 .hero-information-paragraph{
     margin-top: 10px;
@@ -324,6 +340,7 @@ h2::after{
     height: 58px;
     display: block;
     margin-bottom: 14px;
+    fill: var(--whiteColor);
 }
 
 .about-cv >div .icon .fn__svg.arrow
@@ -336,11 +353,13 @@ h2::after{
     transition: 1s ease;
     transform: translateY(0px);
     animation:up_down 1s ease-in-out infinite; 
+    fill: var(--whiteColor);
 } 
 
 .about-cv >div span
 {
     font-weight: 900;
+    color: var(--whiteColor);
 }
 
 .about-cv .line
@@ -445,17 +464,50 @@ h2::after{
     text-transform: uppercase;
 }
 
+
 .resume-grid-item{
-    border-left: 2px solid var(--primaryColor);
     padding-left:1.6rem;
     position: relative;
 }
+
+.resume-grid-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -0.15rem;
+    width: 2px;
+    height: 0%;
+    background: var(--primaryColor);
+    transition: all 2s ease-in-out;
+}
+
+.resume-grid-item._appear::before{
+    height: 100%;
+    transition: all 2s ease-in-out;
+}
+
+.resume-grid > div:first-child .resume-grid-item:last-child::before{
+    transition-delay: 1.5s;
+} 
+
+.resume-grid > div:last-child .resume-grid-item:nth-child(3):before{
+    transition-delay: 1.5s;
+} 
+
+
+.resume-grid > div:last-child .resume-grid-item:last-child::before{
+    transition-delay: 3s;
+} 
+
+
+
+
 
 .resume-grid-item:not(:last-child){
     padding-bottom: 3rem;
 }
 
-.resume-grid-item::before{
+.resume-grid-item::after{
     content: "";
     width: 12px;
     height: 12px;
@@ -524,13 +576,33 @@ h2::after{
     border-radius: var(--raduis);
 }
 
+.skills-grid-item .percentage._appear span{
+    width: var(--width);
+}
 .skills-grid-item .percentage span{
     position: relative;
     height: 100%;
     inset: 0;
-    width: var(--width);
+    width: 0;
     background-color: var(--primaryColor);
     border-radius: var(--raduis);
+    transition: all 2s ease-in-out;
+}
+
+
+.skills-grid > div .skills-grid-item:nth-child(3) .percentage span{
+    transition-delay:.5s;
+}
+
+.skills-grid > div .skills-grid-item:nth-child(4) .percentage span{
+    transition-delay:.7s;
+}
+
+.skills-grid > div .skills-grid-item:nth-child(5) .percentage span{
+    transition-delay:1s;
+}
+.skills-grid > div .skills-grid-item:nth-child(6) .percentage span{
+    transition-delay:1.2s;
 }
 
 .work-flex{
@@ -649,7 +721,7 @@ form .--button{
     top: 20%;
     left: 10px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 form input + span, form textarea + span {
@@ -696,6 +768,7 @@ form input:focus + span, form textarea:focus + span, form input:not(:placeholder
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
+    min-width: 200px;
 }
 .contact-grid-social a svg{
     width: 100%;
@@ -873,6 +946,157 @@ html._open aside >article{
 transform: translateX(0);
 }
 
+.color_sheme {
+    position: fixed;
+    top: 100px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primaryColor);
+    text-align: center;
+    display: inline-grid;
+    place-content: center;
+    box-shadow: 5px 5px 5px #cfcccc;
+    cursor: pointer;
+    z-index: 99;
+}
+
+
+.color_sheme  em {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.color_box {
+    position: fixed;
+    width: 100%;
+    max-width: 350px;
+    top: 100px;
+    right: 0px;
+    padding: 20px;
+    background-color:var(--textColor);
+    transform: translateX(100vw);
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.closer {
+    outline: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    align-self: flex-end;
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+}
+
+.closer em{
+    color: var(--whiteColor);
+} 
+.color_box > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+}
+
+.item {
+    display: block;
+    animation: tab_animation 1s ease;
+}
+
+.item > span {
+    color: #fff;
+    text-align: left;
+    margin: 13px 0px;
+    font-size: 1em;
+    display: block;
+}
+
+.color_box ul li ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -5px;
+}
+
+.color_box ul li ul li {
+    margin: 0 0 5px 5px;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    outline: 1px solid transparent;
+    cursor: pointer;
+}
+
+
+.disabled {
+    display: none;
+}
+.info {
+    float: right;
+    color: #fff;
+    display: flex;
+    width: fit-content;
+    font-size: 14px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.info >div{
+    color: var(--whiteColor);
+    font-size: 1rem;
+}
+
+.info .separator {
+    margin: 0 5px;
+}
+
+.btn_color {
+    bottom: -50px;
+    right: 0;
+    display: flex;
+    position: absolute;
+}
+
+.btn_color span {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    z-index: 5;
+    overflow: hidden;
+    margin-right: 10px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_color span em{
+    color: var(--whiteColor);
+}
+
+
+
+
 @keyframes up_down{
     0%,100%{
         transform: translateY(-5%);
@@ -885,6 +1109,17 @@ transform: translateX(0);
     }
 }
 
+
+.color_box._opened {
+    transform: translateX(0);
+}
+
+
+@keyframes tab_animation
+{
+    0%{opacity:0;transform:rotateY(20deg) rotateZ(-3deg)}
+    100%{opacity:1;transform:rotateY(0) rotateZ(0)}
+}
 
 
 @media only screen and (min-width: 800px)

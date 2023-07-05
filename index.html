@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the portfolio of Wissam Farhat, a skilled and experienced web developer. Dive into a stunning showcase of my expertise in creating dynamic and responsive websites that deliver exceptional user experiences. With a strong command over HTML, CSS, JavaScript, and various frameworks like ASP.Net, I craft visually appealing and functional websites tailored to your unique needs. From interactive interfaces to seamless navigation, my dedication to clean code and efficient development ensures optimal performance across all platforms. Explore my portfolio today to witness the power of web development in action. Get in touch with me to discuss your next web project and turn your vision into a reality">
     <title>Wissam Farhat | Portfolio | web development</title>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="animation.css">
@@ -11,7 +12,7 @@
 <body>
     <header class="header fadeout">
         <article>
-            <a href="#" class="header-logo">
+            <a href="#hero" class="header-logo" aria-label="hero">
                 <svg  x="0px" y="0px" viewBox="0 0 470.12 364.19">
                 <g>
                     <path d="M235,128.34c-11.56,0-23.14,0.34-34.68-0.09c-13.46-0.49-20.36-11.12-14.78-23.34c11.37-24.9,22.93-49.75,35.46-74.08
@@ -38,16 +39,16 @@
                 <span></span>
             </div>
             <ul class="header-menu">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="#about" aria-label="about">About</a></li>
+                <li><a href="#resume" aria-label="resume">Resume</a></li>
+                <li><a href="#skills" aria-label="skills">Skills</a></li>
+                <li><a href="#work" aria-label="work">Work</a></li>
+                <li><a href="#contact-us" aria-label="contact-us">Contact us</a></li>
             </ul>
         </article>
     </header>
     <main>
-        <section class="hero">
+        <section class="hero" id="hero">
             <article>
                 <div class="hero-information fade-left">
                     <span>Hello, It's Me</span>
@@ -65,7 +66,7 @@
                         </p>
                     </div>
                     <div class="hero-information-social">
-                        <a href="#">
+                        <a href="https://www.facebook.com/profile.php?id=100008596353315&mibextid=ZbWKwL" aria-label="facebook" target="_blank">
                         <svg class="--svg-fill"  viewBox="-143 145 512 512" >
                                 <g>
                                     <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7
@@ -79,7 +80,7 @@
                                 </g>
                         </svg>
                         </a>
-                        <a href="#">
+                        <a href="https://www.instagram.com/_f.wissam_" aria-label="instagram" target="_blank">
                             <svg  class="--svg-fill" viewBox="-143 145 512 512" >
                             <g>
                                 <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7
@@ -95,7 +96,7 @@
                             </g>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="https://github.com/WISSAMFARHAT?tab=repositories" aria-label="github" target="_blank">
                             <svg  class="--svg-fill" viewBox="-143 145 512 512" >
                             <g>
                                 <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7
@@ -128,7 +129,7 @@
                 </div>
             </article>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <article>
                 <h2 class="fade-left">About Me</h2>
                 <div class="about-biography">
@@ -142,7 +143,7 @@
                     </div>
                     <div class="fadein">
                         <span>Age:</span>
-                        <p>24 Years</p>
+                        <p class="age">Years</p>
                     </div>
                     <div class="fadein">
                         <span>Adress:</span>
@@ -184,7 +185,7 @@
                 </a>
             </article>
         </section>
-        <section class="resume">
+        <section class="resume" id="resume">
             <article>
                 <h2 class="fade-left">Resume</h2>
                 <div class="resume-grid">
@@ -223,8 +224,7 @@
                 </div>
             </article>
         </section>
-
-        <section class="skills">
+        <section class="skills" id="skills">
             <article>
                 <h2 class="fade-left">skills</h2>
                 <div class="skills-grid">
@@ -327,8 +327,7 @@
                 </div>
             </article>
         </section>
-
-        <section class="work">
+        <section class="work" id="work">
             <article>
                 <h2 class="fade-left">Work</h2>
                 <div class="work-flex fadein">
@@ -545,14 +544,13 @@
                 <a href="https://github.com/WISSAMFARHAT?tab=repositories" target="_blank" class="--button" >View More</a>
             </article>
         </section>
-
-        <section class="contact">
+        <section class="contact" id="contact-us">
             <article>
                 <h2 class="fade-left">contact us</h2>
                 <div class="contact-grid">
-                    <form class="fade-left">
+                    <form class="fade-left" action="mailto:farhat.wissam@outlook.com?subject=Request" method="post" enctype="text/plain">
                         <div>
-                            <input placeholder=" " type="text" name="name" >
+                            <input placeholder=" " required type="text" name="name" >
                             <span>Name*</span>
                         </div>
                         <div>
@@ -560,17 +558,17 @@
                             <span>Phone</span>
                         </div>
                         <div class="--split">
-                            <input placeholder=" " type="text" name="email">
+                            <input placeholder=" " required type="text" name="email">
                             <span>Email*</span>
                         </div>
                         <div class="--split">
                             <textarea placeholder=" " type="message" name="message" ></textarea>
                             <span>Message</span>
                         </div>
-                        <button class="--button">Send Message</button>
+                        <button class="--button" type="submit">Send Message</button>
                     </form>
                     <div class="contact-grid-social fade-right">
-                        <a href="#">
+                        <a href="https://www.facebook.com/profile.php?id=100008596353315&mibextid=ZbWKwL" aria-label="facebook" target="_blank">
                             <svg class="--svg-fill"  viewBox="-143 145 512 512" >
                                     <g>
                                         <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7
@@ -585,7 +583,7 @@
                             </svg>
                             <span>wissam farhat</span>
                             </a>
-                            <a href="#">
+                            <a href="https://www.instagram.com/_f.wissam_" aria-label="instagram" target="_blank">
                                 <svg  class="--svg-fill" viewBox="-143 145 512 512" >
                                 <g>
                                     <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7
@@ -602,7 +600,7 @@
                                 </svg>
                                 <span>_f.wissam_</span>
                             </a>
-                            <a href="#">
+                            <a href="https://github.com/WISSAMFARHAT?tab=repositories" aria-label="github" target="_blank">
                                 <svg  class="--svg-fill" viewBox="-143 145 512 512" >
                                 <g>
                                     <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7
@@ -638,16 +636,16 @@
                 X
             </button>
             <ul class="popup-menu">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="#about" aria-label="about">About</a></li>
+                <li><a href="#resume" aria-label="resume">Resume</a></li>
+                <li><a href="#skills" aria-label="skills">Skills</a></li>
+                <li><a href="#work" aria-label="work">Work</a></li>
+                <li><a href="#contact-us" aria-label="contact-us">Contact us</a></li>
             </ul>
             <hr />
             <ul class="popup-social">
                <li>
-                 <a href="#">
+                <a href="https://www.facebook.com/profile.php?id=100008596353315&mibextid=ZbWKwL" aria-label="facebook" target="_blank">
                     <svg class="--svg-fill"  viewBox="-143 145 512 512" >
                             <g>
                                 <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7
@@ -663,7 +661,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/_f.wissam_" aria-label="instagram" target="_blank">
                         <svg  class="--svg-fill" viewBox="-143 145 512 512" >
                         <g>
                             <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7
@@ -681,7 +679,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://github.com/WISSAMFARHAT?tab=repositories" aria-label="github" target="_blank">
                         <svg  class="--svg-fill" viewBox="-143 145 512 512" >
                         <g>
                             <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7
@@ -708,6 +706,295 @@
             </ul>
         </article>
     </aside>
+    <div class="color_sheme" id="theme">
+         <em class="fa-solid fa-palette"></em>
+    </div>
+    <div class="color_box" id="box">
+        <span class="closer" id="close">
+            <em class="fa-solid fa-xmark"></em>
+        </span>
+        <ul>
+            <li class="item">
+                <span>Online clothing store</span>
+                <ul>
+                    <li data-color="#5d6e99" class="colorhex" style="background-color: rgb(93, 110, 153);"></li>
+                    <li data-color="#b18780" class="colorhex" style="background-color: rgb(177, 135, 128);"></li>
+                    <li data-color="#605e2d" class="colorhex" style="background-color: rgb(96, 94, 45);"></li>
+                    <li data-color="#7c554e" class="colorhex" style="background-color: rgb(124, 85, 78);"></li>
+                    <li data-color="#f4988b" class="colorhex" style="background-color: rgb(244, 152, 139);"></li>
+                    <li data-color="#dfc1b6" class="colorhex" style="background-color: rgb(223, 193, 182);"></li>
+                    <li data-color="#c77fb1" class="colorhex" style="background-color: rgb(199, 127, 177);"></li>
+                    <li data-color="#a9aa71" class="colorhex" style="background-color: rgb(169, 170, 113);"></li>
+                    <li data-color="#96939c" class="colorhex" style="background-color: rgb(150, 147, 156);"></li>
+                    <li data-color="#f36b51" class="colorhex" style="background-color: rgb(243, 107, 81);"></li>
+                </ul>
+            </li>
+            <li class="item">
+                <span>Website for women's clothing, accessories and jewelry store</span>
+                <ul>
+                    <li data-color="#3e1c1d" class="colorhex" style="background-color: rgb(62, 28, 29);"></li>
+                    <li data-color="#694141" class="colorhex" style="background-color: rgb(105, 65, 65);"></li>
+                    <li data-color="#532c27" class="colorhex" style="background-color: rgb(83, 44, 39);"></li>
+                    <li data-color="#7b5650" class="colorhex" style="background-color: rgb(123, 86, 80);"></li>
+                    <li data-color="#2d1012" class="colorhex" style="background-color: rgb(45, 16, 18);"></li>
+                    <li data-color="#92665d" class="colorhex" style="background-color: rgb(146, 102, 93);"></li>
+                    <li data-color="#a9806e" class="colorhex" style="background-color: rgb(169, 128, 110);"></li>
+                    <li data-color="#c29d83" class="colorhex" style="background-color: rgb(194, 157, 131);"></li>
+                    <li data-color="#710e3d" class="colorhex" style="background-color: rgb(113, 14, 61);"></li>
+                    <li data-color="#96285b" class="colorhex" style="background-color: rgb(150, 40, 91);"></li>
+                </ul>
+            </li>
+            <li class="item">
+                <span>Wedding salon website</span>
+                <ul>
+                    <li data-color="#e397b1" class="colorhex" style="background-color: rgb(227, 151, 177);"></li>
+                    <li data-color="#ce7d7a" class="colorhex" style="background-color: rgb(206, 125, 122);"></li>
+                    <li data-color="#a58264" class="colorhex" style="background-color: rgb(165, 130, 100);"></li>
+                    <li data-color="#600b28" class="colorhex" style="background-color: rgb(96, 11, 40);"></li>
+                    <li data-color="#5e2c21" class="colorhex" style="background-color: rgb(94, 44, 33);"></li>
+                    <li data-color="#e8d5c1" class="colorhex" style="background-color: rgb(232, 213, 193);"></li>
+                    <li data-color="#3c0f12" class="colorhex" style="background-color: rgb(60, 15, 18);"></li>
+                    <li data-color="#b47f77" class="colorhex" style="background-color: rgb(180, 127, 119);"></li>
+                    <li data-color="#634352" class="colorhex" style="background-color: rgb(99, 67, 82);"></li>
+                    <li data-color="#11131f" class="colorhex" style="background-color: rgb(17, 19, 31);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Website on the topic of cars</span>
+                <ul>
+                    <li data-color="#0d0208" class="colorhex" style="background-color: rgb(13, 2, 8);"></li>
+                    <li data-color="#170b19" class="colorhex" style="background-color: rgb(23, 11, 25);"></li>
+                    <li data-color="#3a0f18" class="colorhex" style="background-color: rgb(58, 15, 24);"></li>
+                    <li data-color="#661615" class="colorhex" style="background-color: rgb(102, 22, 21);"></li>
+                    <li data-color="#181c39" class="colorhex" style="background-color: rgb(24, 28, 57);"></li>
+                    <li data-color="#1a344f" class="colorhex" style="background-color: rgb(26, 52, 79);"></li>
+                    <li data-color="#0d4d66" class="colorhex" style="background-color: rgb(13, 77, 102);"></li>
+                    <li data-color="#09637e" class="colorhex" style="background-color: rgb(9, 99, 126);"></li>
+                    <li data-color="#0b89a0" class="colorhex" style="background-color: rgb(11, 137, 160);"></li>
+                    <li data-color="#0fa5c0" class="colorhex" style="background-color: rgb(15, 165, 192);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Entertainment website</span>
+                <ul>
+                    <li data-color="#c851ad" class="colorhex" style="background-color: rgb(200, 81, 173);"></li>
+                    <li data-color="#ac3a9c" class="colorhex" style="background-color: rgb(172, 58, 156);"></li>
+                    <li data-color="#682374" class="colorhex" style="background-color: rgb(104, 35, 116);"></li>
+                    <li data-color="#60226f" class="colorhex" style="background-color: rgb(96, 34, 111);"></li>
+                    <li data-color="#7f78ac" class="colorhex" style="background-color: rgb(127, 120, 172);"></li>
+                    <li data-color="#4c8ca8" class="colorhex" style="background-color: rgb(76, 140, 168);"></li>
+                    <li data-color="#7354b1" class="colorhex" style="background-color: rgb(115, 84, 177);"></li>
+                    <li data-color="#151a75" class="colorhex" style="background-color: rgb(21, 26, 117);"></li>
+                    <li data-color="#4b1549" class="colorhex" style="background-color: rgb(75, 21, 73);"></li>
+                    <li data-color="#2c0929" class="colorhex" style="background-color: rgb(44, 9, 41);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Home Decor Shop</span>
+                <ul>
+                    <li data-color="#4f4232" class="colorhex" style="background-color: rgb(79, 66, 50);"></li>
+                    <li data-color="#f3d9b6" class="colorhex" style="background-color: rgb(243, 217, 182);"></li>
+                    <li data-color="#afc15d" class="colorhex" style="background-color: rgb(175, 193, 93);"></li>
+                    <li data-color="#8e4c29" class="colorhex" style="background-color: rgb(142, 76, 41);"></li>
+                    <li data-color="#250c08" class="colorhex" style="background-color: rgb(37, 12, 8);"></li>
+                    <li data-color="#f6ba88" class="colorhex" style="background-color: rgb(246, 186, 136);"></li>
+                    <li data-color="#f59e82" class="colorhex" style="background-color: rgb(245, 158, 130);"></li>
+                    <li data-color="#421b0c" class="colorhex" style="background-color: rgb(66, 27, 12);"></li>
+                    <li data-color="#af9a7d" class="colorhex" style="background-color: rgb(175, 154, 125);"></li>
+                    <li data-color="#242408" class="colorhex" style="background-color: rgb(36, 36, 8);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Photographer's site</span>
+                <ul>
+                    <li data-color="#673b28" class="colorhex" style="background-color: rgb(103, 59, 40);"></li>
+                    <li data-color="#77482c" class="colorhex" style="background-color: rgb(119, 72, 44);"></li>
+                    <li data-color="#49271e" class="colorhex" style="background-color: rgb(73, 39, 30);"></li>
+                    <li data-color="#795d48" class="colorhex" style="background-color: rgb(121, 93, 72);"></li>
+                    <li data-color="#916a41" class="colorhex" style="background-color: rgb(145, 106, 65);"></li>
+                    <li data-color="#301615" class="colorhex" style="background-color: rgb(48, 22, 21);"></li>
+                    <li data-color="#92785f" class="colorhex" style="background-color: rgb(146, 120, 95);"></li>
+                    <li data-color="#dfd3d3" class="colorhex" style="background-color: rgb(223, 211, 211);"></li>
+                    <li data-color="#c8b7af" class="colorhex" style="background-color: rgb(200, 183, 175);"></li>
+                    <li data-color="#ae9883" class="colorhex" style="background-color: rgb(174, 152, 131);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Sports website</span>
+                <ul>
+                    <li data-color="#12151a" class="colorhex" style="background-color: rgb(18, 21, 26);"></li>
+                    <li data-color="#2b2219" class="colorhex" style="background-color: rgb(43, 34, 25);"></li>
+                    <li data-color="#024387" class="colorhex" style="background-color: rgb(2, 67, 135);"></li>
+                    <li data-color="#9fa792" class="colorhex" style="background-color: rgb(159, 167, 146);"></li>
+                    <li data-color="#907608" class="colorhex" style="background-color: rgb(144, 118, 8);"></li>
+                    <li data-color="#121e1a" class="colorhex" style="background-color: rgb(18, 30, 26);"></li>
+                    <li data-color="#200f08" class="colorhex" style="background-color: rgb(32, 15, 8);"></li>
+                    <li data-color="#730101" class="colorhex" style="background-color: rgb(115, 1, 1);"></li>
+                    <li data-color="#574c1e" class="colorhex" style="background-color: rgb(87, 76, 30);"></li>
+                    <li data-color="#3e3e36" class="colorhex" style="background-color: rgb(62, 62, 54);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Restaurant website</span>
+                <ul>
+                    <li data-color="#e8c992" class="colorhex" style="background-color: rgb(232, 201, 146);"></li>
+                    <li data-color="#dda742" class="colorhex" style="background-color: rgb(221, 167, 66);"></li>
+                    <li data-color="#db901b" class="colorhex" style="background-color: rgb(219, 144, 27);"></li>
+                    <li data-color="#e08f02" class="colorhex" style="background-color: rgb(224, 143, 2);"></li>
+                    <li data-color="#c66507" class="colorhex" style="background-color: rgb(198, 101, 7);"></li>
+                    <li data-color="#b07857" class="colorhex" style="background-color: rgb(176, 120, 87);"></li>
+                    <li data-color="#aa2c05" class="colorhex" style="background-color: rgb(170, 44, 5);"></li>
+                    <li data-color="#7d1d07" class="colorhex" style="background-color: rgb(125, 29, 7);"></li>
+                    <li data-color="#450f03" class="colorhex" style="background-color: rgb(69, 15, 3);"></li>
+                    <li data-color="#371001" class="colorhex" style="background-color: rgb(55, 16, 1);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Real estate website</span>
+                <ul>
+                    <li data-color="#b97d47" class="colorhex" style="background-color: rgb(185, 125, 71);"></li>
+                    <li data-color="#d5c697" class="colorhex" style="background-color: rgb(213, 198, 151);"></li>
+                    <li data-color="#888365" class="colorhex" style="background-color: rgb(136, 131, 101);"></li>
+                    <li data-color="#624a25" class="colorhex" style="background-color: rgb(98, 74, 37);"></li>
+                    <li data-color="#a74c1d" class="colorhex" style="background-color: rgb(167, 76, 29);"></li>
+                    <li data-color="#ef8b50" class="colorhex" style="background-color: rgb(239, 139, 80);"></li>
+                    <li data-color="#9ca816" class="colorhex" style="background-color: rgb(156, 168, 22);"></li>
+                    <li data-color="#7c8824" class="colorhex" style="background-color: rgb(124, 136, 36);"></li>
+                    <li data-color="#596c10" class="colorhex" style="background-color: rgb(89, 108, 16);"></li>
+                    <li data-color="#363112" class="colorhex" style="background-color: rgb(54, 49, 18);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Medical website</span>
+                <ul>
+                    <li href="#" data-color="#0d0a11" class="colorhex" style="background-color: rgb(13, 10, 17);"></li>
+                    <li href="#" data-color="#262431" class="colorhex" style="background-color: rgb(38, 36, 49);"></li>
+                    <li href="#" data-color="#575c6f" class="colorhex" style="background-color: rgb(87, 92, 111);"></li>
+                    <li href="#" data-color="#a7a7b1" class="colorhex" style="background-color: rgb(167, 167, 177);"></li>
+                    <li href="#" data-color="#d7d1db" class="colorhex" style="background-color: rgb(215, 209, 219);"></li>
+                    <li href="#" data-color="#babfd2" class="colorhex" style="background-color: rgb(186, 191, 210);"></li>
+                    <li href="#" data-color="#a1b9d5" class="colorhex" style="background-color: rgb(161, 185, 213);"></li>
+                    <li href="#" data-color="#869dd1" class="colorhex" style="background-color: rgb(134, 157, 209);"></li>
+                    <li href="#" data-color="#5576ac" class="colorhex" style="background-color: rgb(85, 118, 172);"></li>
+                    <li href="#" data-color="#133167" class="colorhex" style="background-color: rgb(19, 49, 103);"></li>
+                    <li href="#" data-color="#132017" class="colorhex" style="background-color: rgb(19, 32, 23);"></li>
+                    <li href="#" data-color="#1d8a6b" class="colorhex" style="background-color: rgb(29, 138, 107);"></li>
+                    <li href="#" data-color="#4e7c60" class="colorhex" style="background-color: rgb(78, 124, 96);"></li>
+                    <li href="#" data-color="#689a81" class="colorhex" style="background-color: rgb(104, 154, 129);"></li>
+                    <li href="#" data-color="#255641" class="colorhex" style="background-color: rgb(37, 86, 65);"></li>
+                    <li href="#" data-color="#97c8b3" class="colorhex" style="background-color: rgb(151, 200, 179);"></li>
+                    <li href="#" data-color="#d5e0d0" class="colorhex" style="background-color: rgb(213, 224, 208);"></li>
+                    <li href="#" data-color="#5a4b24" class="colorhex" style="background-color: rgb(90, 75, 36);"></li>
+                    <li href="#" data-color="#4ab89d" class="colorhex" style="background-color: rgb(74, 184, 157);"></li>
+                    <li href="#" data-color="#a18e63" class="colorhex" style="background-color: rgb(161, 142, 99);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Travel agency website</span>
+                <ul>
+                    <li data-color="#e4e0dd" class="colorhex" style="background-color: rgb(228, 224, 221);"></li>
+                    <li data-color="#1a9ca9" class="colorhex" style="background-color: rgb(26, 156, 169);"></li>
+                    <li data-color="#e77992" class="colorhex" style="background-color: rgb(231, 121, 146);"></li>
+                    <li data-color="#40333a" class="colorhex" style="background-color: rgb(64, 51, 58);"></li>
+                    <li data-color="#97b6cb" class="colorhex" style="background-color: rgb(151, 182, 203);"></li>
+                    <li data-color="#6388a2" class="colorhex" style="background-color: rgb(99, 136, 162);"></li>
+                    <li data-color="#b1c1ce" class="colorhex" style="background-color: rgb(177, 193, 206);"></li>
+                    <li data-color="#7bc8dc" class="colorhex" style="background-color: rgb(123, 200, 220);"></li>
+                    <li data-color="#a5c3db" class="colorhex" style="background-color: rgb(165, 195, 219);"></li>
+                    <li data-color="#57c2d4" class="colorhex" style="background-color: rgb(87, 194, 212);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Business website</span>
+                <ul>
+                    <li data-color="#efb38e" class="colorhex" style="background-color: rgb(239, 179, 142);"></li>
+                    <li data-color="#8a5d4a" class="colorhex" style="background-color: rgb(138, 93, 74);"></li>
+                    <li data-color="#fef3d5" class="colorhex" style="background-color: rgb(254, 243, 213);"></li>
+                    <li data-color="#9a563f" class="colorhex" style="background-color: rgb(154, 86, 63);"></li>
+                    <li data-color="#aea5a0" class="colorhex" style="background-color: rgb(174, 165, 160);"></li>
+                    <li data-color="#943014" class="colorhex" style="background-color: rgb(148, 48, 20);"></li>
+                    <li data-color="#253d49" class="colorhex" style="background-color: rgb(37, 61, 73);"></li>
+                    <li data-color="#48312b" class="colorhex" style="background-color: rgb(72, 49, 43);"></li>
+                    <li data-color="#e5c7ad" class="colorhex" style="background-color: rgb(229, 199, 173);"></li>
+                    <li data-color="#"></a></li>
+                    <li data-color="#beb8ac" class="colorhex" style="background-color: rgb(190, 184, 172);"></li>
+                    <li data-color="#697569" class="colorhex" style="background-color: rgb(105, 117, 105);"></li>
+                    <li data-color="#203331" class="colorhex" style="background-color: rgb(32, 51, 49);"></li>
+                    <li data-color="#b82921" class="colorhex" style="background-color: rgb(184, 41, 33);"></li>
+                    <li data-color="#ee3834" class="colorhex" style="background-color: rgb(238, 56, 52);"></li>
+                    <li data-color="#732c30" class="colorhex" style="background-color: rgb(115, 44, 48);"></li>
+                    <li data-color="#050601" class="colorhex" style="background-color: rgb(5, 6, 1);"></li>
+                    <li data-color="#3a261d" class="colorhex" style="background-color: rgb(58, 38, 29);"></li>
+                    <li data-color="#746756" class="colorhex" style="background-color: rgb(116, 103, 86);"></li>
+                    <li data-color="#8c7b71" class="colorhex" style="background-color: rgb(140, 123, 113);"></li>
+                    <li data-color="#0f2936" class="colorhex" style="background-color: rgb(15, 41, 54);"></li>
+                    <li data-color="#5b737f" class="colorhex" style="background-color: rgb(91, 115, 127);"></li>
+                    <li data-color="#d1f3ff" class="colorhex" style="background-color: rgb(209, 243, 255);"></li>
+                    <li data-color="#b3d3fc" class="colorhex" style="background-color: rgb(179, 211, 252);"></li>
+                    <li data-color="#4870a3" class="colorhex" style="background-color: rgb(72, 112, 163);"></li>
+                    <li data-color="#19375b" class="colorhex" style="background-color: rgb(25, 55, 91);"><
+                    <li data-color="#142132" class="colorhex" style="background-color: rgb(20, 33, 50);"></li>
+                    <li data-color="#020a17" class="colorhex" style="background-color: rgb(2, 10, 23);"></li>
+                    <li data-color="#18192e" class="colorhex" style="background-color: rgb(24, 25, 46);"></li>
+                    <li data-color="#333a57" class="colorhex" style="background-color: rgb(51, 58, 87);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Lawyer website</span>
+                <ul>
+                    <li data-color="#948d95" class="colorhex" style="background-color: rgb(148, 141, 149);"></li>
+                    <li data-color="#d2d2c6" class="colorhex" style="background-color: rgb(210, 210, 198);"></li>
+                    <li data-color="#55566b" class="colorhex" style="background-color: rgb(85, 86, 107);"></li>
+                    <li data-color="#8d98ac" class="colorhex" style="background-color: rgb(141, 152, 172);"></li>
+                    <li data-color="#dfccbd" class="colorhex" style="background-color: rgb(223, 204, 189);"></li>
+                    <li data-color="#6a5751" class="colorhex" style="background-color: rgb(106, 87, 81);"></li>
+                    <li data-color="#40050b" class="colorhex" style="background-color: rgb(64, 5, 11);"></li>
+                    <li data-color="#ebe8df" class="colorhex" style="background-color: rgb(235, 232, 223);"></li>
+                    <li data-color="#50401e" class="colorhex" style="background-color: rgb(80, 64, 30);"></li>
+                    <li data-color="#224622" class="colorhex" style="background-color: rgb(34, 70, 34);"></li>
+                </ul>
+            </li>
+            <li class="item disabled">
+                <span>Online electronics store</span>
+                <ul>
+                    <li data-color="#d8ab2a" class="colorhex" style="background-color: rgb(216, 171, 42);"></li>
+                    <li data-color="#e7b731" class="colorhex" style="background-color: rgb(231, 183, 49);"></li>
+                    <li data-color="#cc9926" class="colorhex" style="background-color: rgb(204, 153, 38);"></li>
+                    <li data-color="#1b140a" class="colorhex" style="background-color: rgb(27, 20, 10);"></li>
+                    <li data-color="#875e32" class="colorhex" style="background-color: rgb(135, 94, 50);"></li>
+                    <li data-color="#ebc443" class="colorhex" style="background-color: rgb(235, 196, 67);"></li>
+                    <li data-color="#ac801d" class="colorhex" style="background-color: rgb(172, 128, 29);"></li>
+                    <li data-color="#4e341b" class="colorhex" style="background-color: rgb(78, 52, 27);"></li>
+                    <li data-color="#ac815e" class="colorhex" style="background-color: rgb(172, 129, 94);"></li>
+                    <li data-color="#caa13d" class="colorhex" style="background-color: rgb(202, 161, 61);"></li>
+                    <li data-color="#272027" class="colorhex" style="background-color: rgb(39, 32, 39);"></li>
+                    <li data-color="#1d1419" class="colorhex" style="background-color: rgb(29, 20, 25);"></li>
+                    <li data-color="#826583" class="colorhex" style="background-color: rgb(130, 101, 131);"></li>
+                    <li data-color="#2f111b" class="colorhex" style="background-color: rgb(47, 17, 27);"></li>
+                    <li data-color="#3e2137" class="colorhex" style="background-color: rgb(62, 33, 55);"></li>
+                    <li data-color="#523e4a" class="colorhex" style="background-color: rgb(82, 62, 74);"></li>
+                    <li data-color="#4d6895" class="colorhex" style="background-color: rgb(77, 104, 149);"></li>
+                    <li data-color="#6ec9e4" class="colorhex" style="background-color: rgb(110, 201, 228);"></li>
+                    <li data-color="#2d2f46" class="colorhex" style="background-color: rgb(45, 47, 70);"></li>
+                    <li data-color="#334867" class="colorhex" style="background-color: rgb(51, 72, 103);"></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="info">
+            <div class="currentpage">1</div>
+            <div class="separator">/</div>
+            <div class="total">5</div>
+        </div>
+        <div class="btn_color">
+            <span class="prev">
+                <em class="fa-solid fa-arrow-left"></em>
+            </span>
+            <span class="next">
+                <em class="fa-solid fa-arrow-right"></em>
+            </span>
+        </div>
+    </div>
+
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="animation.js" defer></script>
 </body>
