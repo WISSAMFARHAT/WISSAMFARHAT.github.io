@@ -771,6 +771,7 @@ form  input,form textarea{
 
 form textarea{
     height: 200px;
+    resize: none;
 }
 form .--button{
     cursor: pointer;

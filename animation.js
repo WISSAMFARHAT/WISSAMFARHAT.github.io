@@ -22,7 +22,7 @@ const appearScroll = new IntersectionObserver(function (entries) {
       entry.target.classList.add("_appear");
       //appearScroll.unobserve(entry.target);
     } else {
-      entry.target.classList.remove("_appear");
+      // entry.target.classList.remove("_appear");
     }
   });
 }, appearOptions);
@@ -33,7 +33,7 @@ const appearScroll1 = new IntersectionObserver(function (entries) {
       entry.target.classList.add("_appear");
       //appearScroll.unobserve(entry.target);
     } else {
-      entry.target.classList.remove("_appear");
+      // entry.target.classList.remove("_appear");
     }
   });
 }, appearOptions1);
