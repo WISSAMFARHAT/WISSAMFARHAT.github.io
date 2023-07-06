@@ -188,11 +188,72 @@ h2::after{
     font-weight: bold;
     margin: 0;
 }
-.hero-information > span > span{
-    color:var(--primaryColor);
+.hero-information > .text-animation {
+    position: relative;
     margin: 0;
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color:transparent;
+    -webkit-text-stroke: .7px var(--primaryColor);
+    background-image: linear-gradient(var(--primaryColor),var(--primaryColor));
+    background-repeat:no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: bgtext 6s linear infinite;
+    background-position: -288px 0;
+    animation-delay:2s;
+    width: fit-content;
 }
+.hero-information > .text-animation:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-right: 2px solid var(--primaryColor);
+    z-index: -1;
+    animation: cursorbg 6s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes bgtext{
+    0%{
+        background-position: -288px 0;
+    }
+    50%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -288px 0;
+    }
+}
+
+@keyframes cursorbg{
+
+    0%{
+        left: 0;
+        opacity: 0.2;
+    }
+    25%{
+        left: 50%;
+        opacity: 1;
+        }
+    50%{
+        left: 100%;
+        opacity: 0.2;
+    }
+    75%{
+        left: 50%;
+        opacity: 1;
+    }
+    100%{
+        left: 0;
+        opacity: 0.2;
+    }
+    
+
+}
+
 .hero-information-paragraph{
     margin-top: 10px;
 }
